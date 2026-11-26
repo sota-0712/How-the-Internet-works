@@ -25,10 +25,12 @@ WSL で開発する場合は、リポジトリを WSL 側のホーム配下に�
 ## BDD の進め方
 
 1. **Discovery**：フィーチャーごとにルール・具体例・疑問を書き出す
-2. **Formulation**：`features/*.feature` に日本語の Gherkin（`# language: ja`）でシナリオを書く
+2. **Formulation**：`features/*.feature` に Gherkin でシナリオを書く（キーワードは英語、本文は日本語。ステップ定義がまだなければ `@wip` を付ける）
 3. **Automation**：`features/steps/` にステップ定義を書き、`npm run test:bdd` が赤になるのを確かめてから実装して緑にする
 
 部品は Storybook（`src/**/*.stories.tsx`）で作り、ロジックは Vitest（`src/**/*.test.ts(x)`）で確かめます。
+
+設計判断とその理由は [docs/adr/](docs/adr/README.md) に残しています。
 
 ## ディレクトリ
 
